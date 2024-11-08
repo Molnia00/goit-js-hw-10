@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/1-timer-DvPDDfy5.css">
 </head>
+
 <body>
     <section>
         <input type="text" id="datetime-picker" />
         <button type="button" data-start>Start</button>
-        
+    
         <div class="timer">
             <div class="field">
                 <span class="value" data-days>00</span>
@@ -18,24 +20,25 @@
             <div class="field">
                 <span class="value" data-hours>00</span>
                 <span class="label">Hours</span>
+               </div>
+               <div class="field">
+                   <span class="value" data-minutes>00</span>
+                   <span class="label">Minutes</span>
+               </div>
+              <div class="field">
+                   <span class="value" data-seconds>00</span>
+                  <span class="label">Seconds</span>
             </div>
-            <div class="field">
-                <span class="value" data-minutes>00</span>
-                <span class="label">Minutes</span>
-            </div>
-            <div class="field">
-                <span class="value" data-seconds>00</span>
-                <span class="label">Seconds</span>
-            </div>
-        </div>
+         </div>
 
-    </section>
-
-
-    <section>
-        <script src="./js/1-timer.js"></script>
-    </section>
-
+      </section>
     
-</body>
+    
+     <section>
+         <script src="./js/1-timer.js"></script>
+     </section>
+    
+    
+ </body>
+
 </html>
