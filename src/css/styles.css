@@ -17,6 +17,9 @@
 @import url('./back-link.css');
 @import url('./footer.css');
 
+.homeLink{
+  display: block;
+}
 
 .value{
 font-size: 40px;
@@ -27,6 +30,11 @@ text-align: left;
 text-underline-position: from-font;
 text-decoration-skip-ink: none;
 
+}
+
+.flatpickr-day{
+  background-color: #2e06f8;
+  color: #26f107;
 }
 
 .label{
@@ -68,6 +76,103 @@ text-decoration-skip-ink: none;
 .btnInput:hover{
   background-color: #6C8CFF;;
 }
+
+button[disabled] {
+  background: #CFCFCF ;
+  color: #989898;
+  transition:cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+button[disabled]:hover {
+  background: #CFCFCF;
+  color: #989898;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+
+.flatpickr-day{
+  background: #4E75FF;
+  color: #FFFFFF;
+}
+
+
+    /* =========== /====================================== */
+.form{
+  padding: 10px;
+}
+
+.input-ms{
+  display: block;
+  width: 360px;
+    height: 40px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+}
+
+.labelClass{
+  display: block;
+  font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 16px;
+}
+
+.choiceInput{
+  width: 337px;
+    height: 64px;
+    border: 1px solid #808080;
+      border-radius: 4px;
+      font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 24px;
+}
+
+.btnCreate{
+  width:360px;
+  height:40px;
+    border-radius: 8px;
+    background: #4E75FF;
+    font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+      border: none;
+      color: #FFFFFF;
+    }
+
+.choiceInput:hover,
+.input-ms:hover{
+  border: 1px solid #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
