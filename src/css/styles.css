@@ -4,6 +4,7 @@
   | default @import url()
   |============================
 */
+
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
@@ -32,10 +33,7 @@ text-decoration-skip-ink: none;
 
 }
 
-.flatpickr-day{
-  background-color: #2e06f8;
-  color: #26f107;
-}
+
 
 .label{
   
@@ -157,6 +155,9 @@ button[disabled]:hover {
   border: 1px solid #000000;
 }
 
+.btnCreate:hover{
+  background: #6C8CFF;
+}
 
 
 

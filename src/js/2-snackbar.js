@@ -31,10 +31,18 @@ function createMessage(event) {
     
     promise
     .then(value => {
-        console.log(value);
+        iziToast.success({
+            title: 'Success',
+            message: value,
+            position: 'topRight',
+        });
     })
     .catch(error => {
-        console.log(error);
+        iziToast.error({
+            title: 'Error',
+            message: error,
+            position: 'topRight',
+        });
     });
 
 

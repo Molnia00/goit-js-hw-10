@@ -20,18 +20,18 @@ const dataDay = document.querySelector('[data-days]');
 
 let userSelectedDate = null;
 let stopCount = null;
-
+buttonForDate.disabled = true;
 
 const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
     minuteIncrement: 1,
-    dateFormat: "d.m.Y",
+    dateFormat: "y-m-d",
     onClose(selectedDates) {
         console.log(selectedDates[0]);
         const selectedDate = selectedDates[0];
-  
+        
         if (selectedDate < new Date()) {
             alert('Please choose a date in the future');
             buttonForDate.disabled = true;
