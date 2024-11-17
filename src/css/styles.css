@@ -94,6 +94,13 @@ button[disabled]:hover {
 }
 
 
+.datetime-picker{
+  width: 272px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+
     /* =========== /====================================== */
 .form{
   padding: 10px;

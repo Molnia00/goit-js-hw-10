@@ -17,7 +17,7 @@ const dataMinute = document.querySelector('[data-minutes]');
 const dataHour = document.querySelector('[data-hours]');
 const dataDay = document.querySelector('[data-days]');
 
-
+const error = "Please choose a date in the future";
 let userSelectedDate = null;
 let stopCount = null;
 buttonForDate.disabled = true;
@@ -33,16 +33,22 @@ const options = {
         const selectedDate = selectedDates[0];
         
         if (selectedDate < new Date()) {
-            alert('Please choose a date in the future');
+            iziToast.error({
+            title: 'Error',
+            message: error,
+            position: 'topRight',
+        });
             buttonForDate.disabled = true;
         } else {
             userSelectedDate = selectedDate;
             buttonForDate.disabled = false;
+            
         }
     },
 };
 
-flatpickr("#datetime-picker", options);
+const fp = flatpickr("#datetime-picker", options);
+
 
 
 
@@ -50,6 +56,9 @@ buttonForDate.addEventListener("click",startCount )
 
 function startCount() {
     stopCount = setInterval(updateCount, 1000);
+    buttonForDate.disabled = true;
+    inputOfDATE.disabled = true;
+    fp.set('clickOpens' , false)
 }
 
 function updateCount(){
@@ -57,19 +66,28 @@ function updateCount(){
     const timeLeft = userSelectedDate - now;
     if (timeLeft < 0) {
         clearInterval(stopCount);
-        return
+        
+         buttonForDate.disabled = false;
+    inputOfDATE.disabled = false;
+    fp.set('clickOpens' , true)
+
+        return;
     }
 
     const countTime = convertMs(timeLeft);
     console.log(countTime);
-    dataDay.innerHTML = countTime.days; 
-    dataSecond.innerHTML = countTime.seconds;
-    dataMinute.innerHTML = countTime.minutes;
-    dataHour.innerHTML = countTime.hours;
     
+    dataDay.innerHTML = addZero(countTime.days); 
+    dataSecond.innerHTML = addZero(countTime.seconds);
+    dataMinute.innerHTML = addZero(countTime.minutes);
+    dataHour.innerHTML = addZero(countTime.hours);
 }
 
-
+function addZero(num) {
+    const strnum = "" + num;
+    
+    return strnum.padStart(2, "0");
+}
 
 
 
@@ -93,3 +111,4 @@ function convertMs(ms) {
 }
 
 
+//npm run dev
